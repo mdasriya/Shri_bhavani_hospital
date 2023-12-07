@@ -1,0 +1,12 @@
+.address{
+display: flex;
+flex-direction: column;
+
+}
+
+/* @keyframes slideLeft {
+    to {
+      transform: translateX(-100%);
+    }
+  } */
+  
