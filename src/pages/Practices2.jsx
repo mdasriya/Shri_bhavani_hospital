@@ -18,7 +18,7 @@ const Practices2 = () => {
         </Box>
 
         
-        <Box   padding={"20px"} justifyContent={"space-between"} display={"flex"} gap={"10px"}>
+        <Box    padding={"40px"} justifyContent={"space-between"} display={"flex"} gap={"10px"}>
        {/* image 1 */}
         <div>
             <div class="card">
