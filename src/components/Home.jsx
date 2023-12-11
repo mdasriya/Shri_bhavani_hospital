@@ -18,7 +18,7 @@ const Home = () => {
         {/* Right Side */}
         <Flex align="center">
           {/* Button */}
-          <Button colorScheme="red" mr={4}>
+          <Button colorScheme="teal" mr={4}>
             Make an Appointment
           </Button>
 

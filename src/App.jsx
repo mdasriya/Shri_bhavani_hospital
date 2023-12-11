@@ -3,36 +3,29 @@ import './App.css'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import Cart from './pages/Cart'
-
-
-
+// const ImageCarousel = () => import('./pages/ImageCarousel');
 import ImageCarousel from './pages/ImageCarousel'
-import ImageSlider from './pages/ImageSlider'
-import MovingImage from './pages/MovingImage'
 import Navigation from './pages/Navigation'
-import Practices from './pages/Practices'
 import Practices2 from './pages/Practices2'
+import Testimonial from './pages/Testomonial'
 import Trial from './pages/Trial'
 
-import Footer2 from './pages/footer2'
+
 
 function App() {
 
   return (
     <>
    <Home />  
-   {/* <NavigationBar />  */}
    <Navigation />
    <ImageCarousel />
    <Cart />
-   <Trial></Trial>
-  
+   <Trial />
  <Practices2 />
-{/* <MovingImage /> */}
-   {/* <Footer2></Footer2> */}
+ {/* <CartSlider /> */}
+ <Testimonial />
   <Footer />
- {/* <Practices /> */}
-{/* <ImageSlider /> */}
+
    </>
    )
   }

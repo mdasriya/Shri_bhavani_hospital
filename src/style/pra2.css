@@ -267,26 +267,5 @@
         );
       }
 
-      /* Default styles for all devices */
-      @media only screen and (max-width: 600px) {
-        /* Your CSS styles for small screens go here */
-      
-      }
-
-/* Styles for devices with a maximum width of 600 pixels (e.g., smartphones) */
-@media only screen and (max-width: 600px) {
-    /* Your CSS styles for small screens go here */
+     
   
-  }
-  
-  /* Styles for devices with a minimum width of 601 pixels and a maximum of 1024 pixels (e.g., tablets) */
-  @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    /* Your CSS styles for medium-sized screens go here */
-   
-  }
-  
-  /* Styles for devices with a minimum width of 1025 pixels (e.g., desktops) */
-  @media only screen and (min-width: 1025px) {
-    /* Your CSS styles for large screens go here */
-  
-  }
