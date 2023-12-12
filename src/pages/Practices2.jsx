@@ -11,8 +11,7 @@ const Practices2 = () => {
             <Heading>Medical Specialists</Heading>
            
            </Box>
-           <Box border={"3px solid green"} height={"0px"} width={"25%"} margin={"auto"}>
-                
+           <Box border={"2px solid green"} height={"0px"} width={"20%"} margin={"auto"}> 
                 </Box>
             
         </Box>
@@ -21,43 +20,43 @@ const Practices2 = () => {
         <Box    padding={"40px"} justifyContent={"space-between"} display={"flex"} gap={"10px"}>
        {/* image 1 */}
         <div>
-            <div class="card">
-                <div class="card_content">
-                    <div class="card_title">Dr.</div>
-                    <div class="card_desc">Interventional Cardiology</div>
+            <div className="card">
+                <div className="card_content">
+                    <div className="card_title">Dr.</div>
+                    <div className="card_desc">Interventional Cardiology</div>
                     
                 </div>
-                <div class="card_bottom_shadow"></div>
+                <div className="card_bottom_shadow"></div>
             </div>
         </div>
    {/* image 2 */}
         <div>
-            <div class="card1">
-                <div class="card1_content">
-                <div class="card_title">Dr.</div>
-                    <div class="card_desc">Interventional Cardiology</div>
+            <div className="card1">
+                <div className="card1_content">
+                <div className="card_title">Dr.</div>
+                    <div className="card_desc">Interventional Cardiology</div>
                 </div>
-                <div class="card1_bottom_shadow"></div>
+                <div className="card1_bottom_shadow"></div>
             </div>
         </div>
            {/* image 3 */}
         <div>
-            <div class="card3">
-                <div class="card3_content">
-                <div class="card_title">Dr. </div>
-                    <div class="card_desc">Interventional Cardiology</div>
+            <div className="card3">
+                <div className="card3_content">
+                <div className="card_title">Dr. </div>
+                    <div className="card_desc">Interventional Cardiology</div>
                 </div>
-                <div class="card3_bottom_shadow"></div>
+                <div className="card3_bottom_shadow"></div>
             </div>
         </div>
            {/* image 4 */}
         <div>
-            <div class="card4">
-                <div class="card4_content">
-                <div class="card_title">Dr. </div>
-                    <div class="card_desc">Interventional Cardiology</div>
+            <div className="card4">
+                <div className="card4_content">
+                <div className="card_title">Dr. </div>
+                    <div className="card_desc">Interventional Cardiology</div>
                 </div>
-                <div class="card4_bottom_shadow"></div>
+                <div className="card4_bottom_shadow"></div>
             </div>
         </div>
         </Box>

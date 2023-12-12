@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Image, Button } from '@chakra-ui/react';
-
+import { IoMdArrowDropleft } from "react-icons/io";
+import { IoMdArrowDropright } from "react-icons/io";
 const ImageCarousel = () => {
-    const images = ['https://shribhavanihospital.in/img/intro-carousel/0.jpg', 'https://shribhavanihospital.in/img/intro-carousel/2.JPG', 'https://shribhavanihospital.in/img/intro-carousel/4.jpg', 'https://shribhavanihospital.in/img/intro-carousel/5.jpg']
+  const images = ['https://shribhavanihospital.in/img/intro-carousel/0.jpg', 'https://shribhavanihospital.in/img/intro-carousel/2.JPG', 'https://shribhavanihospital.in/img/intro-carousel/4.jpg', 'https://shribhavanihospital.in/img/intro-carousel/5.jpg']
   const intervalDuration = 4000; // Change image every 2 seconds
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -36,7 +37,7 @@ const ImageCarousel = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-     
+
       <Image
         src={images[currentImageIndex]}
         alt={`Image ${currentImageIndex + 1}`}
@@ -49,22 +50,29 @@ const ImageCarousel = () => {
           <Button
             position="absolute"
             bg="none"
+
             color="white"
-            border="1px solid white"
+            height={"70px"}
+            width={"70px"}
+            // border="1px solid white"
+            borderRadius={"50%"}
             left="0"
             top="50%"
             transform="translateY(-50%)"
             onClick={handlePrevImage}
             transition="opacity 0.9s ease-in-out"
-            _hover={{ opacity: 0.8 }}
+            _hover={{ opacity: 0.8, }}
           >
-            Previous
+            <IoMdArrowDropleft size={40} />
           </Button>
           <Button
             position="absolute"
             bg="none"
             color="white"
-            border="1px solid white"
+            height={"100px"}
+            width={"100px"}
+            //  border="1px solid white"
+            borderRadius={"50%"}
             right="0"
             top="50%"
             transform="translateY(-50%)"
@@ -72,7 +80,7 @@ const ImageCarousel = () => {
             transition="opacity 0.3s ease-in-out"
             _hover={{ opacity: 0.8 }}
           >
-            Next
+            <IoMdArrowDropright size={40} />
           </Button>
         </>
       )}

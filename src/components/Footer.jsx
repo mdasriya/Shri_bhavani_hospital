@@ -41,12 +41,12 @@ var currentYear = currentDate.getFullYear();
       >
         {/* First Box */}
        {/* First Box */}
-       <Box w="100%" h="100%">
+       <Box w="100%" h="100%"  p={"5px 20px"}>
           <Box height="auto" cursor="pointer" p={4}>
             <Image src="http://shribhavanihospital.ramduta.com/wp-content/uploads/2023/06/logo.png" alt="logo" />
           </Box>
           <Box ml={3} display="flex" flexDirection="column" gap={6}>
-            <Text fontSize="15px" color="gray.500">With our 'Patient First' approach, we have brought the best aspects of modern medicine and healthcare under a single multi-functional premise, right from day one.</Text>
+            <Text fontSize="15px" color="gray.700">With our 'Patient First' approach, we have brought the best aspects of modern medicine and healthcare under a single multi-functional premise, right from day one.</Text>
             <Box alignItems="center" display="flex" justifyContent="space-around" height="50px">
               <Box bg='white' _hover={{ bg: 'teal.500', color: 'white' }} border={"1px solid white"} padding="10px">
                 <TiSocialTwitter size={25} />
@@ -55,7 +55,7 @@ var currentYear = currentDate.getFullYear();
                 <FaFacebookF size={25} />
               </Box>
               <Box bg='white' _hover={{ bg: 'teal.500', color: 'white' }} padding="10px" border={"1px solid white"} >
-                <FaInstagram size={25} />
+                <FaInstagram _hover={{size:"30px"}} size={25} />
               </Box>
             </Box>
           </Box>
@@ -70,23 +70,23 @@ var currentYear = currentDate.getFullYear();
           <Box display="flex" flexDirection="column" gap={2}>
             <Box display="flex" alignItems="center" textAlign="center">
               <MdOutlineKeyboardArrowRight size={30} color="teal" />
-              <Text fontSize="15px">Critical Care Medicine</Text>
+              <Text _hover={{ cursor: 'pointer', borderBottom: '2px solid teal', transition: 'border-bottom 0.3s ease' }} fontSize="15px">Critical Care Medicine</Text>
             </Box>
             <Box display="flex" alignItems="center" textAlign="center">
               <MdOutlineKeyboardArrowRight size={30} color="teal"/>
-              <Text fontSize="15px">Internal Medicine</Text>
+              <Text _hover={{ cursor: 'pointer', borderBottom: '2px solid teal', transition: 'border-bottom 0.3s ease' }} fontSize="15px">Internal Medicine</Text>
             </Box>
             <Box display="flex" alignItems="center" textAlign="center">
               <MdOutlineKeyboardArrowRight size={30} color="teal"/>
-              <Text fontSize="15px">Obstetrics & Gynaecology</Text>
+              <Text _hover={{ cursor: 'pointer', borderBottom: '2px solid teal', transition: 'border-bottom 0.3s ease' }} fontSize="15px">Obstetrics & Gynaecology</Text>
             </Box>
             <Box display="flex" alignItems="center" textAlign="center">
               <MdOutlineKeyboardArrowRight size={30} color="teal"/>
-              <Text fontSize="15px">Paediatrics & Pediatric Surgery</Text>
+              <Text _hover={{ cursor: 'pointer', borderBottom: '2px solid teal', transition: 'border-bottom 0.3s ease' }} fontSize="15px">Paediatrics & Pediatric Surgery</Text>
             </Box>
             <Box display="flex" alignItems="center" textAlign="center">
               <MdOutlineKeyboardArrowRight size={30} color="teal"/>
-              <Text fontSize="15px">Cardiology & Cardiac Surgery</Text>
+              <Text _hover={{ cursor: 'pointer', borderBottom: '2px solid teal', transition: 'border-bottom 0.3s ease' }} fontSize="15px">Cardiology & Cardiac Surgery</Text>
             </Box>
           </Box>
         </Box>
@@ -146,42 +146,43 @@ var currentYear = currentDate.getFullYear();
             <Box display="flex" alignItems="center" textAlign="center" >
               <MdOutlineKeyboardArrowRight size={30} color='teal' />
               <Text _hover={{ cursor: 'pointer', borderBottom: '2px solid teal', transition: 'border-bottom 0.3s ease' }} fontSize="15px">X-Ray</Text>
-            </Box>
-            
+            </Box>   
           </Box>
         </Box>
 
         {/* Last Box */}
         <Box w="100%" h="100%" >
           <Box  height="14%">
-            <Heading fontSize="17px">HAVE A QUESTIONS?</Heading>
+            <Heading  fontSize="17px">HAVE A QUESTIONS?</Heading>
           </Box>
           <Box display="flex" flexDirection="column" gap={4}>
             <Box  display="flex" justifyContent="flex-start" alignItems="center" textAlign="center">
               <TfiLocationPin size={20} color="teal" />
-              <Text ml={2} fontSize="17px">Sr.No 58, Shri Bhawani Mata</Text>
-              <Text ml={4} fontSize="17px">Mandir Road, Pardi, Nagpur - 440035</Text>
+           
+              <Text ml={2} fontSize="15px">Sr.No 58, Shri Bhawani Mata</Text>
+              <Text ml={4} fontSize="15px">Mandir Road, Pardi, Nagpur - 440035</Text>
+          
             </Box>
             <Box  display="flex" alignItems="center" textAlign="center">
               <HiPhone size={20} color="teal" />
-              <Text fontSize="18px" color="teal.500" ml={2} fontWeight="500">
+              <Text fontSize="18px" color="teal.500" ml={2} _hover={{ cursor: 'pointer', borderBottom: '2px solid teal', transition: 'border-bottom 0.3s ease' }} fontWeight="500">
                 +91-7722055550
               </Text>
             </Box>
             <Box  display="flex" alignItems="center" textAlign="center">
               <BiMailSend size={20} color="teal" />
-              <Text ml={2} fontWeight="500" color="teal.500" fontSize="20px">itsbmhri@gmail.com</Text>
+              <Text ml={2} fontWeight="500" color="teal.500" _hover={{ cursor: 'pointer', borderBottom: '2px solid teal', transition: 'border-bottom 0.3s ease' }} fontSize="20px">itsbmhri@gmail.com</Text>
             </Box>
           </Box>
         </Box>
       </Grid>
       <Box  w='100%' p={4} bg={"teal"}>
 <Center>
-<Text color={'white'} fontWeight={"600"} fontSize={'lg'}>
+<Text color={'white'} fontWeight={"600"} fontSize={'md'}>
 Designed and Developed by &copy;
 </Text>
 <Link href="http://royalswebtechpvtltd.com" isExternal  target="_blank">
-<Text color={'white'}  _hover={{color:"black"}} fontWeight={"600"} fontSize={'lg'}>
+<Text color={'white'}  _hover={{color:"black"}} fontWeight={"600"} fontSize={'md'}>
 Royal's WebTech
 </Text>
 </Link>

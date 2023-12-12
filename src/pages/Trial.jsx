@@ -22,14 +22,14 @@ const Trial = () => {
               <Flex>
                 {/* Left Box Inside */}
                 <Box width="15%" p="5px" height="200px">
-                  <MdLocalHospital size={50} color="teal" />
+                  <MdLocalHospital size={40} color="teal" />
                 </Box>
                 {/* Right Box Inside */}
                 <Box width="80%" p="5px" height="200px">
-                  <Text fontSize="24px" color="gray.600" fontWeight="500">
+                  <Text fontSize="20px" color="gray.600" fontWeight="500">
                     24 hrs emergency services
                   </Text>
-                  <Text mt="20px" fontSize="19px">
+                  <Text mt="20px" fontSize="17px">
                     Our ambulance service is available 24 hrs in case of any emergency.
                   </Text>
                 </Box>
@@ -47,14 +47,14 @@ const Trial = () => {
               <Flex>
                 {/* Left Box Inside */}
                 <Box width="20%" p="5px" height="200px">
-                  <ImAidKit size={50} color="teal" />
+                  <ImAidKit size={40} color="teal" />
                 </Box>
                 {/* Right Box Inside */}
                 <Box width="80%" p="5px" height="200px">
-                  <Text fontSize="24px" color="gray.600" fontWeight="500">
+                  <Text fontSize="20px" color="gray.600" fontWeight="500">
                     Quality Standards
                   </Text>
-                  <Text mt="20px" fontSize="19px">
+                  <Text mt="20px" fontSize="17px">
                     We are committed to service excellence and continuous performance improvement.
                   </Text>
                 </Box>
@@ -76,14 +76,14 @@ const Trial = () => {
               <Flex>
                 {/* Left Box Inside */}
                 <Box width="15%" p="5px" height="200px">
-                  <FaUserDoctor size={50} color="teal" />
+                  <FaUserDoctor size={40} color="teal" />
                 </Box>
                 {/* Right Box Inside */}
                 <Box width="80%" p="5px" height="200px">
-                  <Text fontSize="24px" color="gray.600" fontWeight="500">
+                  <Text fontSize="20px" color="gray.600" fontWeight="500">
                     Nursing
                   </Text>
-                  <Text mt="20px" fontSize="19px">
+                  <Text mt="20px" fontSize="17px">
                     We have an efficient and hardworking nursing staff, readily available for the patients.
                   </Text>
                 </Box>
@@ -101,14 +101,14 @@ const Trial = () => {
               <Flex>
                 {/* Left Box Inside */}
                 <Box width="15%" height="200px">
-                  <FaAmbulance size={50} color="teal" ml={2}/>
+                  <FaAmbulance size={40} color="teal" ml={2} />
                 </Box>
                 {/* Right Box Inside */}
                 <Box width="80%" height="200px">
-                  <Text fontSize="24px" color="gray.600" fontWeight="500">
+                  <Text fontSize="20px" color="gray.600" fontWeight="500">
                     Accreditation
                   </Text>
-                  <Text mt="20px" fontSize="19px">
+                  <Text mt="20px" fontSize="17px">
                     Arneja Heart & Multi-Speciality Hospital is central India’s one of the NABH accredited hospital
                   </Text>
                 </Box>
@@ -118,7 +118,7 @@ const Trial = () => {
         </Box>
 
         {/* Right Box */}
-        <Box width={{ base: '100%', md: '30%' }} boxShadow="rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;" borderRadius="5px" height="400px">
+        <Box width={{ base: '100%', md: '30%' }} boxShadow="rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;" borderRadius="5px" height="100%">
           <Center>
             <Image
               mt={{ base: '20px', md: '40px' }}

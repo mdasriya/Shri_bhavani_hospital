@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Menu, MenuButton, Button, MenuItem, MenuList, FormLabel, Text } from '@chakra-ui/react';
-import { MdKeyboardArrowDown } from 'react-icons/md';
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import styled from 'styled-components';
-import { MdKeyboardArrowUp } from "react-icons/md";
+
 const Navigation = () => {
   const [arrow1, setArrow1] = useState(false);
   const [arrow2, setArrow2] = useState(false);
@@ -16,103 +16,119 @@ const Navigation = () => {
   const handleArrow2 = () => {
     setArrow2((prev) => !prev);
   };
+
   const handleArrow3 = () => {
     setArrow3((prev) => !prev);
   };
+
   const handleArrow4 = () => {
     setArrow4((prev) => !prev);
   };
 
   return (
     <DIV>
-    <Box  display="flex" bg="teal.500" justifyContent="space-around" padding="12px">
-      {/* Home */}
-      <Menu>
-        <MenuButton bg="none" fontSize="sm" colorScheme="none" color="white"  as={Button}>
-          HOME
-        </MenuButton>
-      </Menu>
+      <Box display="flex" bg="teal.500" justifyContent="space-around" padding="12px">
+        {/* Home */}
+        <Menu>
+          <MenuButton bg="none" fontSize="sm" colorScheme="none" color="white" as={Button}>
+            HOME
+          </MenuButton>
+        </Menu>
 
-      {/* ABOUT */}
-      <Menu>
-        <MenuButton
-          bg="none"
-          onClick={handleArrow1}
-          fontSize="sm"
-          colorScheme="none"
-          color="white"
-          as={Button}
-          rightIcon={arrow1 ? <MdKeyboardArrowUp size={20}/> : <MdKeyboardArrowDown size={20}/>}
-        >
-          ABOUT
-        </MenuButton>
-        <MenuList colorScheme="none" mt="4px" fontSize="sm">
-          <MenuItem W="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>About our Hospital</Text>
-          </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>About our Trust</Text>
-          </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Board of Trustees</Text>
-          </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Testimonial</Text>
-          </MenuItem>
-        </MenuList>
-      </Menu>
+        {/* ABOUT */}
+        <Menu>
+          <MenuButton
+            bg="none"
+            onClick={handleArrow1}
+            fontSize="sm"
+            colorScheme="none"
+            color="white"
+            as={Button}
+            rightIcon={arrow1 ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
+          >
+            ABOUT
+          </MenuButton>
+          <MenuList
+            colorScheme="none"
+            mt="4px"
+            fontSize="sm"
+            className={`dropdown ${arrow1 ? 'open' : 'closed'}`}
+          >
+            <MenuItem W="auto" minH="40px" bg={"none"}>
+              <Text className='cool-link'>About our Hospital</Text>
+            </MenuItem>
+            <MenuItem W="auto" minH="40px" bg={"none"}>
+              <Text className='cool-link'>About our Trust</Text>
+            </MenuItem>
+            <MenuItem W="auto" minH="40px" bg={"none"}>
+              <Text className='cool-link'>Board of Trustees</Text>
+            </MenuItem>
+            <MenuItem W="auto" minH="40px" bg={"none"}>
+              <Text className='cool-link'>Testimonial</Text>
+            </MenuItem>
+          </MenuList>
+        </Menu>
 
-      {/* SPECIALITIES */}
-      <Menu>
-        <MenuButton
-          bg="none"
-          fontSize="sm"
-          colorScheme="none"
-          color="white"
-          as={Button}
-          onClick={handleArrow2}
-          rightIcon={arrow2 ? <MdKeyboardArrowUp size={20}/> : <MdKeyboardArrowDown size={20}/>}
-        >
-          SPECIALITIES
-        </MenuButton>
-        <MenuList fontSize="sm" colorScheme="none">
-          <MenuItem W="auto" minH="40px"  bg={"none"}>
-            <Text className='cool-link'>Orthopedic</Text>
-          </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Departments</Text>
-          </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Hematology</Text>
-          </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Cardiology</Text>
-          </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Dermatology</Text>
-          </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Neurology</Text>
-          </MenuItem>
-        </MenuList>
-      </Menu>
+        {/* SPECIALITIES */}
+        <Menu>
+          <MenuButton
+            bg="none"
+            fontSize="sm"
+            colorScheme="none"
+            color="white"
+            as={Button}
+            onClick={handleArrow2}
+            rightIcon={arrow2 ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
+          >
+            SPECIALITIES
+          </MenuButton>
+          <MenuList
+            fontSize="sm"
+            colorScheme="none"
+            className={`dropdown ${arrow2 ? 'open' : 'closed'}`}
+          >
+            <MenuItem W="auto" minH="40px" bg={"none"}>
+              <Text className='cool-link'>Orthopedic</Text>
+            </MenuItem>
+            <MenuItem W="auto" minH="40px" bg={"none"}>
+              <Text className='cool-link'>Departments</Text>
+            </MenuItem>
+            <MenuItem W="auto" minH="40px" bg={"none"}>
+              <Text className='cool-link'>Hematology</Text>
+            </MenuItem>
+            <MenuItem W="auto" minH="40px" bg={"none"}>
+              <Text className='cool-link'>Cardiology</Text>
+            </MenuItem>
+            <MenuItem W="auto" minH="40px" bg={"none"}>
+              <Text className='cool-link'>Dermatology</Text>
+            </MenuItem>
+            <MenuItem W="auto" minH="40px" bg={"none"}>
+              <Text className='cool-link'>Neurology</Text>
+            </MenuItem>
+          </MenuList>
+        </Menu>
 
-      {/* SERVICES */}
-      <Menu columns={{ base: 1, md: 2 }} >
-        <MenuButton
-          bg="none"
-          fontSize="sm"
-          colorScheme="none"
-          W="100%"
-          color="white"
-          as={Button}
-          onClick={handleArrow3}
-          rightIcon={arrow3 ? <MdKeyboardArrowUp size={20}/> : <MdKeyboardArrowDown size={20}/>}
-        >
-          SERVICES
-        </MenuButton>
-        <MenuList  width={"100%"} padding={2} fontSize="sm">
-          <Box display={{ base: 'block', md: 'flex' }} gap={6}>
+        {/* SERVICES */}
+        <Menu columns={{ base: 1, md: 2 }}>
+          <MenuButton
+            bg="none"
+            fontSize="sm"
+            colorScheme="none"
+            W="100%"
+            color="white"
+            as={Button}
+            onClick={handleArrow3}
+            rightIcon={arrow3 ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
+          >
+            SERVICES
+          </MenuButton>
+          <MenuList
+            width={"100%"}
+            padding={2}
+            fontSize="sm"
+            className={`dropdown ${arrow3 ? 'open' : 'closed'}`}
+          >
+            <Box display={{ base: 'block', md: 'flex' }} gap={6}>
             <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
               <FormLabel borderBottom="1px solid teal" p={2}>
                 Services
@@ -223,31 +239,31 @@ const Navigation = () => {
             </Box>
      
           </Box>
-        </MenuList>
-      </Menu>
+          </MenuList>
+        </Menu>
 
-      {/* OUR DOCTORS */}
-      <Menu>
-        <MenuButton bg="none" fontSize="sm" colorScheme="none" color="white" as={Button}>
-          OUR DOCTORS
-        </MenuButton>
-      </Menu>
+        {/* OUR DOCTORS */}
+        <Menu>
+          <MenuButton bg="none" fontSize="sm" colorScheme="none" color="white" as={Button}>
+            OUR DOCTORS
+          </MenuButton>
+        </Menu>
 
-      {/* INSURANCE */}
-      <Menu>
-        <MenuButton
-          bg="none"
-          fontSize="sm"
-          colorScheme="none"
-          color="white"
-          as={Button}
-          onClick={handleArrow4}
-          rightIcon={arrow4 ? <MdKeyboardArrowUp size={20}/> : <MdKeyboardArrowDown size={20}/>}
-        >
-          INSURANCE
-        </MenuButton>
-        <MenuList fontSize="sm">
-        <MenuItem W="auto" minH='20px' bg={"none"}>
+        {/* INSURANCE */}
+        <Menu>
+          <MenuButton
+            bg="none"
+            fontSize="sm"
+            colorScheme="none"
+            color="white"
+            as={Button}
+            onClick={handleArrow4}
+            rightIcon={arrow4 ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
+          >
+            INSURANCE
+          </MenuButton>
+          <MenuList fontSize="sm" className={`dropdown ${arrow4 ? 'open' : 'closed'}`}>
+          <MenuItem W="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>The New India Assurance Co.Ltd</Text>
                         </MenuItem>
                         <MenuItem W="auto" minH='20px' bg={"none"}>
@@ -280,16 +296,24 @@ const Navigation = () => {
                         <MenuItem W="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>Apollo Munich Health Insurance Company Ltd.</Text>
                         </MenuItem>
-        </MenuList>
-      </Menu>
+          </MenuList>
+        </Menu>
 
-      {/* CONTACT */}
-      <Menu>
-        <MenuButton bg="none" fontSize="sm" textAlign="center" alignItems="center" colorScheme="none" color="white" as={Button}>
-          CONTACT
-        </MenuButton>
-      </Menu>
-    </Box>
+        {/* CONTACT */}
+        <Menu>
+          <MenuButton
+            bg="none"
+            fontSize="sm"
+            textAlign="center"
+            alignItems="center"
+            colorScheme="none"
+            color="white"
+            as={Button}
+          >
+            CONTACT
+          </MenuButton>
+        </Menu>
+      </Box>
     </DIV>
   );
 };
@@ -297,11 +321,11 @@ const Navigation = () => {
 export default Navigation;
 
 const DIV = styled.div`
-.cool-link {
+  .cool-link {
     display: inline-block;
     color: #000;
     text-decoration: none;
-}
+  }
 
   .cool-link::after {
     content: '';
@@ -309,12 +333,28 @@ const DIV = styled.div`
     width: 0;
     height: 2px;
     background: teal;
-    transition: width .3s;
-}
+    transition: width 0.3s;
+  }
 
-.cool-link:hover::after {
+  .cool-link:hover::after {
     width: 100%;
-  
-}  
+  }
 
-`
+  .dropdown {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, opacity 0.3s ease-in-out;
+  }
+
+  .dropdown.open {
+    opacity: 1;
+    max-height: 2000px; /* Adjust as needed based on your content */
+  }
+
+  .dropdown.closed {
+    opacity: 0;
+    max-height: 0;
+  }
+`;
+

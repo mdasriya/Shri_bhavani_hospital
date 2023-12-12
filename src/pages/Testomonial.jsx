@@ -58,11 +58,14 @@ import {
   const Testimonial = () => {
     return (
       <Container maxW="10xl" py={10} px={6}>
-      <Flex justifyContent="center" mb={8}>
-        <chakra.h3 fontSize="3xl" fontWeight="bold" mb={3} textAlign="center">
+      <Flex justifyContent="center" mb={2}>
+        <chakra.h3 fontSize="3xl" fontWeight="bold"  textAlign="center">
           What people are saying about Us
-        </chakra.h3>
+        </chakra.h3> 
       </Flex>
+      <Box border={"2px solid green"} height={"0px"} width={"20%"} margin={"auto"}>
+                
+                </Box>
       <SimpleGrid columns={{ base: 1, md: 2 }} placeItems="center" spacing={1} mt={12} mb={4}>
         {testimonials.map((obj, index) => (
           <Stack

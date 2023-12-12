@@ -34,7 +34,7 @@ const statData = [
 const Cart = () => {
   return (
     <Container maxW="full"  p={{ base: 5 , md: 10 }}>
-      <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={3} mt={12} mb={4}>
+      <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={3} mt={3} mb={4}>
         {statData.map((data) => (
           <Box textAlign="center" cursor="pointer" key={data.id} p={5} boxShadow="md" _hover={{boxShadow:"rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;"}} rounded="md" borderWidth={1}>
            <Box display="flex"  justifyContent="center" className="top" width="100%" 
@@ -42,7 +42,7 @@ const Cart = () => {
          textAlign="center"
          height="20%">
  <Box display="flex"  justifyContent="center" className="top" width="100%" 
-        //  border="1px solid green" 
+       
          textAlign="center"
          height="20%">
 
@@ -56,10 +56,10 @@ const Cart = () => {
         <Box className="bottom" mt="30px" width="100%" 
         // border="1px solid green"
          height="80%">
-          <Text fontWeight="500" fontSize="22px">
+          <Text fontWeight="500" fontSize="15px">
          {data.heading}
           </Text>
-          <Text fontWeight="500" mt="10px" fontSize="17px">
+          <Text fontWeight="500" mt="10px" fontSize="15px">
           {data.text}
 
           </Text>
