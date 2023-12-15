@@ -47,16 +47,16 @@ const Navigation = () => {
           ABOUT
         </MenuButton>
         <MenuList colorScheme="none" mt="4px" fontSize="sm">
-          <MenuItem W="auto" minH="40px" bg={"none"}>
+          <MenuItem width="auto" minH="40px" bg={"none"}>
             <Text className='cool-link'>About our Hospital</Text>
           </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
+          <MenuItem width="auto" minH="40px" bg={"none"}>
             <Text className='cool-link'>About our Trust</Text>
           </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
+          <MenuItem width="auto" minH="40px" bg={"none"}>
             <Text className='cool-link'>Board of Trustees</Text>
           </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
+          <MenuItem width="auto" minH="40px" bg={"none"}>
             <Text className='cool-link'>Testimonial</Text>
           </MenuItem>
         </MenuList>
@@ -76,22 +76,22 @@ const Navigation = () => {
           SPECIALITIES
         </MenuButton>
         <MenuList fontSize="sm" colorScheme="none">
-          <MenuItem W="auto" minH="40px"  bg={"none"}>
+          <MenuItem width="auto" minH="40px"  bg={"none"}>
             <Text className='cool-link'>Orthopedic</Text>
           </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
+          <MenuItem width="auto" minH="40px" bg={"none"}>
             <Text className='cool-link'>Departments</Text>
           </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
+          <MenuItem width="auto" minH="40px" bg={"none"}>
             <Text className='cool-link'>Hematology</Text>
           </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
+          <MenuItem width="auto" minH="40px" bg={"none"}>
             <Text className='cool-link'>Cardiology</Text>
           </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
+          <MenuItem width="auto" minH="40px" bg={"none"}>
             <Text className='cool-link'>Dermatology</Text>
           </MenuItem>
-          <MenuItem W="auto" minH="40px" bg={"none"}>
+          <MenuItem width="auto" minH="40px" bg={"none"}>
             <Text className='cool-link'>Neurology</Text>
           </MenuItem>
         </MenuList>
@@ -103,7 +103,7 @@ const Navigation = () => {
           bg="none"
           fontSize="sm"
           colorScheme="none"
-          W="100%"
+       
           color="white"
           as={Button}
           onClick={handleArrow3}
@@ -247,37 +247,37 @@ const Navigation = () => {
           INSURANCE
         </MenuButton>
         <MenuList fontSize="sm">
-        <MenuItem W="auto" minH='20px' bg={"none"}>
+        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>The New India Assurance Co.Ltd</Text>
                         </MenuItem>
-                        <MenuItem W="auto" minH='20px' bg={"none"}>
+                        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>United India Insurance Co. Ltd.</Text>
                         </MenuItem>
-                        <MenuItem W="auto" minH='20px' bg={"none"}>
+                        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>National Insurance Co. Ltd.</Text>
                         </MenuItem>
-                        <MenuItem W="auto" minH='20px' bg={"none"}>
+                        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>The Oriental Insurance Co.Ltd</Text>
                         </MenuItem>
-                        <MenuItem W="auto" minH='20px' bg={"none"}>
+                        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>Navi General Insurance Ltd.</Text>
                         </MenuItem>
-                        <MenuItem W="auto" minH='20px' bg={"none"}>
+                        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>Manipal Cigna Health Insurance Company Ltd.</Text>
                         </MenuItem>
-                        <MenuItem W="auto" minH='20px' bg={"none"}>
+                        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>Bharti AXA General Insurance Co. Ltd.</Text>
                         </MenuItem>
-                        <MenuItem W="auto" minH='20px' bg={"none"}>
+                        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>Aditya Birla Health Insurance Co Ltd.</Text>
                         </MenuItem>
-                        <MenuItem W="auto" minH='20px' bg={"none"}>
+                        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>Bajaj Allianz General Insurance Co Ltd</Text>
                         </MenuItem>
-                        <MenuItem W="auto" minH='20px' bg={"none"}>
+                        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>HDFC ERGO General Insurance Co.Ltd.</Text>
                         </MenuItem>
-                        <MenuItem W="auto" minH='20px' bg={"none"}>
+                        <MenuItem width="auto" minH='20px' bg={"none"}>
                             <Text className='cool-link'>Apollo Munich Health Insurance Company Ltd.</Text>
                         </MenuItem>
         </MenuList>

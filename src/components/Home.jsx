@@ -2,16 +2,18 @@ import React from 'react';
 import { Box, Flex, Text, Button, Image, Stack } from '@chakra-ui/react';
 import { FaLocationDot } from "react-icons/fa6";
 import { MdPhone } from "react-icons/md";
-import "../style/home.css"
+
 import Navigation from '../pages/Navigation';
 import ImageCarousel from '../pages/ImageCarousel';
 import Cart from '../pages/Cart';
 import Trial from '../pages/Trial';
 import Practices2 from '../pages/Practices2';
-import Gallery from '../pages/Gallery';
 import Testimonial from '../pages/Testomonial';
 import Footer from './Footer';
-import DonarCaresole from '../pages/DonarCaresole';
+import MissionSection from '../pages/MissionSection';
+import DonorCaresole from '../pages/DonorCaresole';
+
+
 const Home = () => {
   return (
     <>
@@ -60,8 +62,8 @@ const Home = () => {
 
             <Flex align="center" gap={2}>
 
-              <FaLocationDot size={20} _hover={{ size: 50 }} />
-              <Box fontFamily={"sans-serif"} fontSize={"sm"} clssName="address">
+              <FaLocationDot size={25} _hover={{ size: 50 }} />
+              <Box fontFamily={"sans-serif"} fontSize={"sm"} display={"flex"} flexDirection={"column"}>
                 <Text >Sr.No 58, Shri Bhawani Mata Mandir</Text>
                 <Text >Road,Pardi,Nagpur - 440035</Text>
               </Box>
@@ -69,8 +71,8 @@ const Home = () => {
 
 
             <Flex align="center" gap={3}>
-              <MdPhone size={20} />
-              <Box clssName="address" fontSize={"sm"}>
+              <MdPhone size={25} />
+              <Box  display={"flex"} flexDirection={"column"} fontSize={"sm"}>
                 <Text fontFamily={"sans-serif"} color="black" >contact</Text>
                 <Text fontFamily={"sans-serif"} color="black" >0712 6661800</Text>
               </Box>
@@ -84,8 +86,8 @@ const Home = () => {
       <Cart />
       <Trial />
       <Practices2 />
-      <Gallery />
-      {/* <DonarCaresole /> */}
+      <MissionSection />
+      <DonorCaresole />
       <Testimonial />
 
       <Footer />

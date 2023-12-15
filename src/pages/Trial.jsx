@@ -3,27 +3,37 @@ import { Box, Flex, Text, Image, Center } from '@chakra-ui/react';
 import { MdLocalHospital } from 'react-icons/md';
 import { ImAidKit } from 'react-icons/im';
 import { FaUserDoctor } from 'react-icons/fa6';
-import { FaAmbulance } from "react-icons/fa";
+import { FaAmbulance } from 'react-icons/fa';
+import styled from 'styled-components';
+
 const Trial = () => {
   return (
-    <Box width="100%" p="10px" height="auto" >
-      <Flex direction={{ base: 'column', md: 'row' }} justifyContent="space-between">
+    <DIV>
+    <Box  width="100%" p="20px" height="auto">
+      <Flex   direction={{ base: 'column', md: 'row' }} justifyContent="space-between">
         {/* Left Box */}
-        <Box width={{ base: '100%', md: '70%' }} height={{ base: 'auto', md: '400px' }}>
+        <Box  width={{ base: '100%', md: '70%' }} height={{ base: 'auto', md: '400px' }}>
           {/* First Row */}
           <Flex direction={{ base: 'column', md: 'row' }}>
             {/* Box 1 */}
             <Box
+            
               width={{ base: '100%', md: '45%' }}
               height="200px"
-              _hover={{ boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;' }}
-              pt={{ base: '20px', md: '10px' }}
+              _hover={{
+                boxShadow:
+                  'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;',
+              }}
+              pt={{ base: '20px', md: '20px' }}
+              className="animated-box"
+             
             >
               <Flex>
                 {/* Left Box Inside */}
                 <Box width="15%" p="5px" height="200px">
                   <MdLocalHospital size={40} color="teal" />
                 </Box>
+                
                 {/* Right Box Inside */}
                 <Box width="80%" p="5px" height="200px">
                   <Text fontSize="20px" color="gray.600" fontWeight="500">
@@ -38,16 +48,22 @@ const Trial = () => {
 
             {/* Box 2 */}
             <Box
+            //  border={"1px"}
               width={{ base: '100%', md: '50%' }}
               pl={2}
               height="200px"
-              _hover={{ boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;' }}
-              pt={{ base: '20px', md: '10px' }}
+              _hover={{
+               
+                boxShadow:
+                  'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;',
+              }}
+              pt={{ base: '20px', md: '20px' }}
+              className="animated-box"
             >
               <Flex>
                 {/* Left Box Inside */}
                 <Box width="20%" p="5px" height="200px">
-                  <ImAidKit size={40} color="teal" />
+                  <ImAidKit size={40} color='teal' />
                 </Box>
                 {/* Right Box Inside */}
                 <Box width="80%" p="5px" height="200px">
@@ -64,16 +80,18 @@ const Trial = () => {
 
           {/* Second Row */}
           <Flex direction={{ base: 'column', md: 'row' }}>
-
-
             {/* Box 3 */}
             <Box
               width={{ base: '100%', md: '45%' }}
               height="200px"
-              _hover={{ boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;' }}
-              pt={{ base: '20px', md: '10px' }}
+              _hover={{
+                boxShadow:
+                  'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;',
+              }}
+              pt={{ base: '20px', md: '20px' }}
+              className="animated-box"
             >
-              <Flex>
+              <Flex >
                 {/* Left Box Inside */}
                 <Box width="15%" p="5px" height="200px">
                   <FaUserDoctor size={40} color="teal" />
@@ -95,8 +113,12 @@ const Trial = () => {
               width={{ base: '100%', md: '50%' }}
               height="200px"
               pl={5}
-              _hover={{ boxShadow: 'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;' }}
-              pt={{ base: '20px', md: '10px' }}
+              _hover={{
+                boxShadow:
+                  'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;',
+              }}
+              pt={{ base: '20px', md: '20px' }}
+              className="animated-box"
             >
               <Flex>
                 {/* Left Box Inside */}
@@ -109,7 +131,8 @@ const Trial = () => {
                     Accreditation
                   </Text>
                   <Text mt="20px" fontSize="17px">
-                    Arneja Heart & Multi-Speciality Hospital is central India’s one of the NABH accredited hospital
+                    Arneja Heart & Multi-Speciality Hospital is central India’s one of the NABH accredited
+                    hospital
                   </Text>
                 </Box>
               </Flex>
@@ -118,7 +141,12 @@ const Trial = () => {
         </Box>
 
         {/* Right Box */}
-        <Box width={{ base: '100%', md: '30%' }} boxShadow="rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;" borderRadius="5px" height="100%">
+        <Box
+          width={{ base: '100%', md: '30%' }}
+          boxShadow="rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;"
+          borderRadius="5px"
+          height="100%"
+        >
           <Center>
             <Image
               mt={{ base: '20px', md: '40px' }}
@@ -131,7 +159,20 @@ const Trial = () => {
         </Box>
       </Flex>
     </Box>
+    </DIV>
   );
 };
 
 export default Trial;
+
+
+const DIV = styled.div`
+  
+  .animated-box {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.animated-box:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+`
