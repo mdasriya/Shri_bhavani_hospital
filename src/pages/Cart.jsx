@@ -34,7 +34,7 @@ const statData = [
 
 const Cart = () => {
   return (
-    <Container maxW="full" p={{ base: 5, md: 10 }} padding="20px"  gap={10}>
+    <Container maxW="full" p={{ base: 5, md: 10 }}   gap={10}>
       <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={3} mt={3} mb={4}>
         {statData.map((data) => (
           <Box

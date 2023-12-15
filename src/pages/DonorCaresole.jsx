@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 
 // import required modules
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination,Navigation, Autoplay } from 'swiper/modules';
 import styled from 'styled-components';
 import { Box, Heading, Text } from '@chakra-ui/react';
 const DonorCaresole = () => {
@@ -20,8 +20,8 @@ const DonorCaresole = () => {
         <DIV>
              <Box data-aos="fade-left" padding={"10px 0px"} width={"100%"} >
                 <Box width={"40%"} padding={"10px"} margin={"auto"} display={"flex"} textAlign={"center"} justifyContent={"center"} gap={"20px"}>
-                    <Text fontSize={"30px"}>Meet our</Text>
-                    <Heading>Medical Specialists</Heading>
+                    <Text fontWeight={500} fontSize={"30px"}>Meet our</Text>
+                    <Heading fontFamily={"monospace"} letterSpacing={1}>Medical Specialists</Heading>
 
                 </Box>
                 <Box border={"2px solid green"} height={"0px"} width={"20%"} margin={"auto"}>
@@ -37,9 +37,9 @@ const DonorCaresole = () => {
                 //     direction:'ltr',
                 // }}
                 loop={true}
-                
+                navigation={true}
                 direction="horizontal" 
-                modules={[Pagination, Autoplay]}
+                modules={[Pagination,Navigation, Autoplay]}
                 className="mukesh"
                 // direction="rtl"
             >
@@ -75,8 +75,6 @@ const DIV = styled.div`
     height: 100%;
     /* border: 2px solid rgb(61, 9, 156); */
     transform: translate3d(0px, 0, 0);
-   
-    
 }
 
 .mukesh :nth-child(1){
@@ -86,7 +84,6 @@ const DIV = styled.div`
     align-items: center;
 
 }
-
 
 .swiper-slide {
     /* border: 2px solid red; */

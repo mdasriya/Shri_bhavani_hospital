@@ -1,118 +1,88 @@
 import React, { useState } from 'react';
 import { Box, Menu, MenuButton, Button, MenuItem, MenuList, FormLabel, Text } from '@chakra-ui/react';
-import { MdKeyboardArrowDown } from 'react-icons/md';
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import styled from 'styled-components';
-import { MdKeyboardArrowUp } from "react-icons/md";
+
 const Navigation = () => {
-  const [arrow1, setArrow1] = useState(false);
-  const [arrow2, setArrow2] = useState(false);
-  const [arrow3, setArrow3] = useState(false);
-  const [arrow4, setArrow4] = useState(false);
+  // State for arrow icons
+  const [arrows, setArrows] = useState([false, false, false, false]);
 
-  const handleArrow1 = () => {
-    setArrow1((prev) => !prev);
+  // Function to handle arrow click
+  const handleArrow = (index) => {
+    setArrows((prev) => prev.map((prevValue, i) => (i === index ? !prevValue : prevValue)));
   };
 
-  const handleArrow2 = () => {
-    setArrow2((prev) => !prev);
-  };
-  const handleArrow3 = () => {
-    setArrow3((prev) => !prev);
-  };
-  const handleArrow4 = () => {
-    setArrow4((prev) => !prev);
-  };
+  // Function to render menu items
+  const renderMenuItems = (items) => (
+    items.map((item, index) => (
+      <MenuItem key={index} width="auto" minH="40px" bg="none">
+        <Text className='cool-link'>{item}</Text>
+      </MenuItem>
+    ))
+  );
 
   return (
-    <DIV>
-    <Box  display="flex" bg="teal.500" justifyContent="space-around" padding="12px">
-      {/* Home */}
-      <Menu>
-        <MenuButton bg="none" fontSize="sm" colorScheme="none" color="white"  as={Button}>
-          HOME
-        </MenuButton>
-      </Menu>
+    <StyledDiv>
+      <Box display="flex" bg="teal.500" justifyContent="space-around" padding="12px">
+        {/* Home */}
+        <Menu>
+          <MenuButton bg="none" fontSize="sm" colorScheme="none" color="white" as={Button}>
+            HOME
+          </MenuButton>
+        </Menu>
 
-      {/* ABOUT */}
-      <Menu>
-        <MenuButton
-          bg="none"
-          onClick={handleArrow1}
-          fontSize="sm"
-          colorScheme="none"
-          color="white"
-          as={Button}
-          rightIcon={arrow1 ? <MdKeyboardArrowUp size={20}/> : <MdKeyboardArrowDown size={20}/>}
-        >
-          ABOUT
-        </MenuButton>
-        <MenuList colorScheme="none" mt="4px" fontSize="sm">
-          <MenuItem width="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>About our Hospital</Text>
-          </MenuItem>
-          <MenuItem width="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>About our Trust</Text>
-          </MenuItem>
-          <MenuItem width="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Board of Trustees</Text>
-          </MenuItem>
-          <MenuItem width="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Testimonial</Text>
-          </MenuItem>
-        </MenuList>
-      </Menu>
+        {/* ABOUT */}
+        <Menu>
+          <MenuButton
+            bg="none"
+            onClick={() => handleArrow(0)}
+            fontSize="sm"
+            colorScheme="none"
+            color="white"
+            as={Button}
+            rightIcon={arrows[0] ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
+          >
+            ABOUT
+          </MenuButton>
+          <MenuList colorScheme="none" mt="4px" fontSize="sm">
+            {renderMenuItems(['About our Hospital', 'About our Trust', 'Board of Trustees', 'Testimonial'])}
+          </MenuList>
+        </Menu>
 
-      {/* SPECIALITIES */}
-      <Menu>
-        <MenuButton
-          bg="none"
-          fontSize="sm"
-          colorScheme="none"
-          color="white"
-          as={Button}
-          onClick={handleArrow2}
-          rightIcon={arrow2 ? <MdKeyboardArrowUp size={20}/> : <MdKeyboardArrowDown size={20}/>}
-        >
-          SPECIALITIES
-        </MenuButton>
-        <MenuList fontSize="sm" colorScheme="none">
-          <MenuItem width="auto" minH="40px"  bg={"none"}>
-            <Text className='cool-link'>Orthopedic</Text>
-          </MenuItem>
-          <MenuItem width="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Departments</Text>
-          </MenuItem>
-          <MenuItem width="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Hematology</Text>
-          </MenuItem>
-          <MenuItem width="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Cardiology</Text>
-          </MenuItem>
-          <MenuItem width="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Dermatology</Text>
-          </MenuItem>
-          <MenuItem width="auto" minH="40px" bg={"none"}>
-            <Text className='cool-link'>Neurology</Text>
-          </MenuItem>
-        </MenuList>
-      </Menu>
+        {/* SPECIALITIES */}
+        <Menu>
+          <MenuButton
+            bg="none"
+            fontSize="sm"
+            colorScheme="none"
+            color="white"
+            as={Button}
+            onClick={() => handleArrow(1)}
+            rightIcon={arrows[1] ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
+          >
+            SPECIALITIES
+          </MenuButton>
+          <MenuList fontSize="sm" colorScheme="none">
+            {renderMenuItems(['Orthopedic', 'Departments', 'Hematology', 'Cardiology', 'Dermatology', 'Neurology'])}
+          </MenuList>
+        </Menu>
 
-      {/* SERVICES */}
-      <Menu columns={{ base: 1, md: 2 }} >
-        <MenuButton
-          bg="none"
-          fontSize="sm"
-          colorScheme="none"
-       
-          color="white"
-          as={Button}
-          onClick={handleArrow3}
-          rightIcon={arrow3 ? <MdKeyboardArrowUp size={20}/> : <MdKeyboardArrowDown size={20}/>}
-        >
-          SERVICES
-        </MenuButton>
-        <MenuList  width={"100%"} padding={2} fontSize="sm">
-          <Box display={{ base: 'block', md: 'flex' }} gap={6}>
+        {/* SERVICES */}
+        <Menu columns={{ base: 1, md: 2 }}>
+          <MenuButton
+            bg="none"
+            fontSize="sm"
+            colorScheme="none"
+            color="white"
+            as={Button}
+            onClick={() => handleArrow(2)}
+            rightIcon={arrows[2] ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
+          >
+            SERVICES
+          </MenuButton>
+          <MenuList width="100%" padding={2} fontSize="sm">
+            {/* Add your service categories */}
+            <Box display={{ base: 'block', md: 'flex' }} gap={6}>
             <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
               <FormLabel borderBottom="1px solid teal" p={2}>
                 Services
@@ -223,85 +193,65 @@ const Navigation = () => {
             </Box>
      
           </Box>
-        </MenuList>
-      </Menu>
+          </MenuList>
+        </Menu>
 
-      {/* OUR DOCTORS */}
-      <Menu>
-        <MenuButton bg="none" fontSize="sm" colorScheme="none" color="white" as={Button}>
-          OUR DOCTORS
-        </MenuButton>
-      </Menu>
+        {/* OUR DOCTORS */}
+        <Menu>
+          <MenuButton bg="none" fontSize="sm" colorScheme="none" color="white" as={Button}>
+            OUR DOCTORS
+          </MenuButton>
+        </Menu>
 
-      {/* INSURANCE */}
-      <Menu>
-        <MenuButton
-          bg="none"
-          fontSize="sm"
-          colorScheme="none"
-          color="white"
-          as={Button}
-          onClick={handleArrow4}
-          rightIcon={arrow4 ? <MdKeyboardArrowUp size={20}/> : <MdKeyboardArrowDown size={20}/>}
-        >
-          INSURANCE
-        </MenuButton>
-        <MenuList fontSize="sm">
-        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>The New India Assurance Co.Ltd</Text>
-                        </MenuItem>
-                        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>United India Insurance Co. Ltd.</Text>
-                        </MenuItem>
-                        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>National Insurance Co. Ltd.</Text>
-                        </MenuItem>
-                        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>The Oriental Insurance Co.Ltd</Text>
-                        </MenuItem>
-                        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>Navi General Insurance Ltd.</Text>
-                        </MenuItem>
-                        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>Manipal Cigna Health Insurance Company Ltd.</Text>
-                        </MenuItem>
-                        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>Bharti AXA General Insurance Co. Ltd.</Text>
-                        </MenuItem>
-                        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>Aditya Birla Health Insurance Co Ltd.</Text>
-                        </MenuItem>
-                        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>Bajaj Allianz General Insurance Co Ltd</Text>
-                        </MenuItem>
-                        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>HDFC ERGO General Insurance Co.Ltd.</Text>
-                        </MenuItem>
-                        <MenuItem width="auto" minH='20px' bg={"none"}>
-                            <Text className='cool-link'>Apollo Munich Health Insurance Company Ltd.</Text>
-                        </MenuItem>
-        </MenuList>
-      </Menu>
+        {/* INSURANCE */}
+        <Menu>
+          <MenuButton
+            bg="none"
+            fontSize="sm"
+            colorScheme="none"
+            color="white"
+            as={Button}
+            onClick={() => handleArrow(3)}
+            rightIcon={arrows[3] ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
+          >
+            INSURANCE
+          </MenuButton>
+          <MenuList fontSize="sm">
+            {renderMenuItems([
+              'The New India Assurance Co.Ltd',
+              'United India Insurance Co. Ltd.',
+              'National Insurance Co. Ltd.',
+              'The Oriental Insurance Co.Ltd',
+              'Navi General Insurance Ltd.',
+              'Manipal Cigna Health Insurance Company Ltd.',
+              'Bharti AXA General Insurance Co. Ltd.',
+              'Aditya Birla Health Insurance Co Ltd.',
+              'Bajaj Allianz General Insurance Co Ltd',
+              'HDFC ERGO General Insurance Co.Ltd.',
+              'Apollo Munich Health Insurance Company Ltd.',
+            ])}
+          </MenuList>
+        </Menu>
 
-      {/* CONTACT */}
-      <Menu>
-        <MenuButton bg="none" fontSize="sm" textAlign="center" alignItems="center" colorScheme="none" color="white" as={Button}>
-          CONTACT
-        </MenuButton>
-      </Menu>
-    </Box>
-    </DIV>
+        {/* CONTACT */}
+        <Menu>
+          <MenuButton bg="none" fontSize="sm" textAlign="center" alignItems="center" colorScheme="none" color="white" as={Button}>
+            CONTACT
+          </MenuButton>
+        </Menu>
+      </Box>
+    </StyledDiv>
   );
 };
 
 export default Navigation;
 
-const DIV = styled.div`
-.cool-link {
+const StyledDiv = styled.div`
+  .cool-link {
     display: inline-block;
     color: #000;
     text-decoration: none;
-}
+  }
 
   .cool-link::after {
     content: '';
@@ -309,12 +259,10 @@ const DIV = styled.div`
     width: 0;
     height: 2px;
     background: teal;
-    transition: width .3s;
-}
+    transition: width 0.3s;
+  }
 
-.cool-link:hover::after {
+  .cool-link:hover::after {
     width: 100%;
-  
-}  
-
-`
+  }
+`;

@@ -9,7 +9,7 @@ const Practices2 = () => {
             <Box data-aos="fade-left" padding={"10px 0px"} width={"100%"} >
                 <Box width={"40%"} padding={"10px"} margin={"auto"} display={"flex"} textAlign={"center"} justifyContent={"center"} gap={"20px"}>
                     <Text fontSize={"30px"}>Meet our</Text>
-                    <Heading>Medical Specialists</Heading>
+                    <Heading fontFamily={"monospace"}>Medical Specialists</Heading>
 
                 </Box>
                 <Box border={"2px solid green"} height={"0px"} width={"20%"} margin={"auto"}>
