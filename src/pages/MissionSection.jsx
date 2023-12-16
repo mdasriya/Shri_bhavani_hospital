@@ -18,7 +18,7 @@ import {
 const MissionSection = () => {
   return (
     
-    <Container maxW="6xl" px={{ base: 6, md: 3 }} border={"1px"} py={24} data-aos="zoom-in" >
+    <Container maxW="6xl" px={{ base: 6, md: 3 }}   data-aos="zoom-in" >
       <Stack direction={{ base: 'column', md: 'row' }} justifyContent="center">
         <Stack direction="column" spacing={6} justifyContent="center" maxW="480px">
           <HStack

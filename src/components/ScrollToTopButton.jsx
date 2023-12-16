@@ -31,7 +31,7 @@ const ScrollToTopButton = () => {
       right="6"
       zIndex={100}
       size="md"
-      icon={<TiArrowSortedUp  size={30} color='white'/>}
+      icon={<TiArrowSortedUp  size={25} color='white'/>}
       onClick={handleClick}
       bg={useColorModeValue("teal.500", "teal.200")}
       _hover={{ bg: useColorModeValue("teal.600", "teal.300") }}
