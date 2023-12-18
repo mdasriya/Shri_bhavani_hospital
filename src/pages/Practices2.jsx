@@ -6,10 +6,10 @@ import styled from 'styled-components'
 const Practices2 = () => {
     return (
         <>
-            <Box data-aos="fade-left" padding={"10px 0px"} width={"100%"} >
+            <Box  data-aos="fade-left" padding={"10px 0px"} width={"100%"} >
                 <Box width={"40%"} padding={"10px"} margin={"auto"} display={"flex"} textAlign={"center"} justifyContent={"center"} gap={"20px"}>
                     <Text fontSize={"30px"}>Meet our</Text>
-                    <Heading fontFamily={"monospace"}>Medical Specialists</Heading>
+                    <Heading>Medical Specialists</Heading>
 
                 </Box>
                 <Box border={"2px solid green"} height={"0px"} width={"20%"} margin={"auto"}>
@@ -18,14 +18,13 @@ const Practices2 = () => {
             </Box>
 
 
-            <Box data-aos="fade-left" padding={"40px"} justifyContent={"space-between"} display={"flex"} gap={"10px"}>
+            <Box className='coloumnclass' data-aos="fade-left" padding={"40px"} justifyContent={"space-between"} display={"flex"} gap={"10px"}>
                 {/* image 1 */}
                 <div>
                     <div className="card">
                         <div className="card_content">
                             <div className="card_title">Dr.</div>
                             <div className="card_desc">Interventional Cardiology</div>
-
                         </div>
                         <div className="card_bottom_shadow"></div>
                     </div>

@@ -267,5 +267,28 @@
         );
       }
 
+
+      /* pra2.css */
+
+/* Add your existing styles here */
+
+/* Override styles for small screens */
+@media screen and (max-width: 600px) {
+  /* Adjust the width, margin, and padding based on your design */
+ /* image1 css */
+ .css-1i2f9lk{
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
+  justify-content: center;
+ }
+
+
+
+
+
+
+}
+
      
   

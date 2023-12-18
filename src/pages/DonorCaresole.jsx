@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 
 // import required modules
-import { Pagination,Navigation, Autoplay } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import styled from 'styled-components';
 import { Box, Heading, Text } from '@chakra-ui/react';
 const DonorCaresole = () => {
@@ -18,10 +18,10 @@ const DonorCaresole = () => {
 
     return (
         <DIV>
-             <Box data-aos="fade-left" padding={"10px 0px"} width={"100%"} >
+            <Box data-aos="fade-left" padding={"10px 0px"} width={"100%"} >
                 <Box width={"40%"} padding={"10px"} margin={"auto"} display={"flex"} textAlign={"center"} justifyContent={"center"} gap={"20px"}>
                     <Text fontWeight={500} fontSize={"30px"}>Meet our</Text>
-                    <Heading fontFamily={"monospace"} letterSpacing={1}>Medical Specialists</Heading>
+                    <Heading fontFamily={"monospace"} >Medical Specialists</Heading>
 
                 </Box>
                 <Box border={"2px solid green"} height={"0px"} width={"20%"} margin={"auto"}>
@@ -31,17 +31,17 @@ const DonorCaresole = () => {
             <Swiper
                 slidesPerView={4}
                 spaceBetween={30}
-                // autoplay={{
-                //     delay: 2500,
-                //     disableOnInteraction: false,
-                //     direction:'ltr',
-                // }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                    direction: 'ltr',
+                    reverseDirection: true, // Set reverseDirection to true
+                }}
                 loop={true}
                 navigation={true}
-                direction="horizontal" 
-                modules={[Pagination,Navigation, Autoplay]}
+                direction="horizontal"
+                modules={[Pagination, Navigation, Autoplay]}
                 className="mukesh"
-                // direction="rtl"
             >
 
                 <SwiperSlide >
@@ -55,11 +55,11 @@ const DonorCaresole = () => {
 
                 <SwiperSlide><img src="http://shribhavanihospital.ramduta.com/wp-content/uploads/2023/06/GeneXIndia-Pvt-Ltd.png" alt="" /></SwiperSlide>
 
-                <SwiperSlide><img src="http://shribhavanihospital.ramduta.com/wp-content/uploads/2023/06/client-6.png" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="http://shribhavanihospital.ramduta.com/wp-content/uploads/2023/06/client-2.jpg" alt="" /></SwiperSlide>
 
                 <SwiperSlide><img src="http://shribhavanihospital.ramduta.com/wp-content/uploads/2023/06/client-5.jpg" alt="" /></SwiperSlide>
 
-                <SwiperSlide><img src="http://shribhavanihospital.ramduta.com/wp-content/uploads/2023/06/client-2.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="http://shribhavanihospital.ramduta.com/wp-content/uploads/2023/06/client-6.png" alt="" /></SwiperSlide>
             </Swiper>
         </DIV>
     );

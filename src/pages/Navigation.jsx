@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
-import { Box, Menu, MenuButton, Button, MenuItem, MenuList, FormLabel, Text } from '@chakra-ui/react';
+import { Box, Menu, MenuButton, Button, MenuItem, MenuList, Text } from '@chakra-ui/react';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import styled from 'styled-components';
 
 const Navigation = () => {
-  // State for arrow icons
   const [arrows, setArrows] = useState([false, false, false, false]);
 
-  // Function to handle arrow click
   const handleArrow = (index) => {
     setArrows((prev) => prev.map((prevValue, i) => (i === index ? !prevValue : prevValue)));
   };
 
-  // Function to render menu items
   const renderMenuItems = (items) => (
     items.map((item, index) => (
       <MenuItem key={index} width="auto" minH="40px" bg="none">
@@ -23,20 +20,24 @@ const Navigation = () => {
 
   return (
     <StyledDiv>
-      <Box display="flex" bg="teal.500" justifyContent="space-around" padding="12px">
-        {/* Home */}
+      <Box
+        display="flex"
+        flexDirection={{ base: "column", md: "row" }}
+        bg="teal.500"
+        justifyContent="space-around"
+        padding="12px"
+      >
         <Menu>
-          <MenuButton bg="none" fontSize="sm" colorScheme="none" color="white" as={Button}>
+          <MenuButton bg="none" fontSize={{ base: "sm", md: "md" }} colorScheme="none" color="white" as={Button}>
             HOME
           </MenuButton>
         </Menu>
 
-        {/* ABOUT */}
         <Menu>
           <MenuButton
             bg="none"
             onClick={() => handleArrow(0)}
-            fontSize="sm"
+            fontSize={{ base: "sm", md: "md" }}
             colorScheme="none"
             color="white"
             as={Button}
@@ -44,16 +45,15 @@ const Navigation = () => {
           >
             ABOUT
           </MenuButton>
-          <MenuList colorScheme="none" mt="4px" fontSize="sm">
+          <MenuList colorScheme="none" mt="4px" fontSize={{ base: "sm", md: "md" }}>
             {renderMenuItems(['About our Hospital', 'About our Trust', 'Board of Trustees', 'Testimonial'])}
           </MenuList>
         </Menu>
 
-        {/* SPECIALITIES */}
         <Menu>
           <MenuButton
             bg="none"
-            fontSize="sm"
+            fontSize={{ base: "sm", md: "md" }}
             colorScheme="none"
             color="white"
             as={Button}
@@ -62,16 +62,15 @@ const Navigation = () => {
           >
             SPECIALITIES
           </MenuButton>
-          <MenuList fontSize="sm" colorScheme="none">
+          <MenuList fontSize={{ base: "sm", md: "md" }} colorScheme="none">
             {renderMenuItems(['Orthopedic', 'Departments', 'Hematology', 'Cardiology', 'Dermatology', 'Neurology'])}
           </MenuList>
         </Menu>
 
-        {/* SERVICES */}
         <Menu columns={{ base: 1, md: 2 }}>
           <MenuButton
             bg="none"
-            fontSize="sm"
+            fontSize={{ base: "sm", md: "md" }}
             colorScheme="none"
             color="white"
             as={Button}
@@ -80,134 +79,45 @@ const Navigation = () => {
           >
             SERVICES
           </MenuButton>
-          <MenuList width="100%" padding={2} fontSize="sm">
-            {/* Add your service categories */}
+          <MenuList width="90%" zIndex={9999} padding={2} fontSize={{ base: "sm", md: "md" }}>
             <Box display={{ base: 'block', md: 'flex' }} gap={6}>
-            <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
-              <FormLabel borderBottom="1px solid teal" p={2}>
-                Services
-              </FormLabel>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>OPD</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Emergency Medical Service & Ambulance</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Dialysis</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Preventing Health Check-up</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>ICU & SICU</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>PICU & NICU</Text>
-              </MenuItem>
-            </Box>
+              <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
+                {renderMenuItems(['OPD', 'Emergency Medical Service & Ambulance', 'Dialysis', 'Preventing Health Check-up', 'ICU & SICU', 'PICU & NICU'])}
+              </Box>
 
-            {/* Add other service categories */}
-            <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
-              <FormLabel borderBottom="1px solid teal" p={2}>
-                Pathology
-              </FormLabel>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Haematology</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>BioChemestry</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Hormones</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Serology</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Microscopy</Text>
-              </MenuItem>
-            </Box>
+              <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
+                {renderMenuItems(['Haematology', 'BioChemestry', 'Hormones', 'Serology', 'Microscopy'])}
+              </Box>
 
-            {/* Add other service categories */}
-            <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
-              <FormLabel borderBottom="1px solid teal" p={2}>
-                Imaging
-              </FormLabel>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>X-Ray</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>CT</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Altrasound</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Sono-Mammography</Text>
-              </MenuItem>
-            </Box>
+              <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
+                {renderMenuItems(['X-Ray', 'CT', 'Altrasound', 'Sono-Mammography'])}
+              </Box>
 
-            {/* Add other service categories */}
-            <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
-              <FormLabel borderBottom="1px solid teal" p={2}>
-                Non Interventional Cardiology
-              </FormLabel>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>ECG</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Stress Test (TMT)</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Echocardiography</Text>
-              </MenuItem>
-            </Box>
-            <Box  width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
-           <Box display={"flex"}>
-             <Box ><MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'> Neurology</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Physiotherophy</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Pulmonary Function Test (PFT)</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Pharmacy (24X7)</Text>
-              </MenuItem></Box>
-              <Box> <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Canteen</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Dietary</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>CSSD</Text>
-              </MenuItem>
-              <MenuItem minH="20px" bg={"none"}>
-                <Text className='cool-link'>Bio-Medical Engineering</Text>
-              </MenuItem></Box>
+              <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
+                {renderMenuItems(['ECG', 'Stress Test (TMT)', 'Echocardiography'])}
+              </Box>
+
+              <Box width={{ base: '100%', md: '25%' }} mb={{ base: 4, md: 0 }}>
+                {renderMenuItems(['Neurology', 'Physiotherophy', 'Pulmonary Function Test (PFT)', 'Pharmacy (24X7)'])}
+              </Box>
+
+              <Box width={{ base: '100%', md: '25%' }}>
+                {renderMenuItems(['Canteen', 'Dietary', 'CSSD', 'Bio-Medical Engineering'])}
               </Box>
             </Box>
-     
-          </Box>
           </MenuList>
         </Menu>
 
-        {/* OUR DOCTORS */}
         <Menu>
-          <MenuButton bg="none" fontSize="sm" colorScheme="none" color="white" as={Button}>
+          <MenuButton bg="none" fontSize={{ base: "sm", md: "md" }} colorScheme="none" color="white" as={Button}>
             OUR DOCTORS
           </MenuButton>
         </Menu>
 
-        {/* INSURANCE */}
         <Menu>
           <MenuButton
             bg="none"
-            fontSize="sm"
+            fontSize={{ base: "sm", md: "md" }}
             colorScheme="none"
             color="white"
             as={Button}
@@ -216,26 +126,26 @@ const Navigation = () => {
           >
             INSURANCE
           </MenuButton>
-          <MenuList fontSize="sm">
+          <MenuList fontSize={{ base: "sm", md: "md" }}>
             {renderMenuItems([
-              'The New India Assurance Co.Ltd',
-              'United India Insurance Co. Ltd.',
-              'National Insurance Co. Ltd.',
-              'The Oriental Insurance Co.Ltd',
-              'Navi General Insurance Ltd.',
-              'Manipal Cigna Health Insurance Company Ltd.',
-              'Bharti AXA General Insurance Co. Ltd.',
-              'Aditya Birla Health Insurance Co Ltd.',
-              'Bajaj Allianz General Insurance Co Ltd',
-              'HDFC ERGO General Insurance Co.Ltd.',
-              'Apollo Munich Health Insurance Company Ltd.',
+              'The New India Assurance Co.Ltd', 'United India Insurance Co. Ltd.', 'National Insurance Co. Ltd.',
+              'The Oriental Insurance Co.Ltd', 'Navi General Insurance Ltd.', 'Manipal Cigna Health Insurance Company Ltd.',
+              'Bharti AXA General Insurance Co. Ltd.', 'Aditya Birla Health Insurance Co Ltd.',
+              'Bajaj Allianz General Insurance Co Ltd', 'HDFC ERGO General Insurance Co.Ltd.', 'Apollo Munich Health Insurance Company Ltd.'
             ])}
           </MenuList>
         </Menu>
 
-        {/* CONTACT */}
         <Menu>
-          <MenuButton bg="none" fontSize="sm" textAlign="center" alignItems="center" colorScheme="none" color="white" as={Button}>
+          <MenuButton
+            bg="none"
+            fontSize={{ base: "sm", md: "md" }}
+            textAlign="center"
+            alignItems="center"
+            colorScheme="none"
+            color="white"
+            as={Button}
+          >
             CONTACT
           </MenuButton>
         </Menu>
@@ -244,7 +154,6 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
 
 const StyledDiv = styled.div`
   .cool-link {
@@ -266,3 +175,5 @@ const StyledDiv = styled.div`
     width: 100%;
   }
 `;
+
+export default Navigation;
